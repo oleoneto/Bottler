@@ -1,0 +1,44 @@
+% include('head.tpl')
+% include('navbar.tpl', page="Database")
+% include('hero.tpl', text="All content on this page is fetched from a SQL database. <br/> Currently, the database has two tables: Users and Songs.", actiontext="Wanna Login?", actionlink="/login")
+
+<div class="container top-60">
+<form method="post">
+  <div class="form-group row">
+    <label for="title" class="col-sm-2 col-form-label">Title</label>
+    <div class="col-sm-5">
+      <input type="text" name="title" class="form-control" id="title" placeholder="Song title">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="album" class="col-sm-2 col-form-label">Album</label>
+    <div class="col-sm-5">
+      <input type="text" name="album" class="form-control" id="album" placeholder="Album Title">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="artist" class="col-sm-2 col-form-label">Artist</label>
+    <div class="col-sm-5">
+      <input type="text" name="artist" class="form-control" id="artist" placeholder="Artist Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="image" class="col-sm-2 col-form-label">Image</label>
+    <div class="col-sm-5">
+      <input type="url" name="image" class="form-control" id="image" placeholder="Image URL">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="audio" class="col-sm-2 col-form-label">Audio</label>
+    <div class="col-sm-5">
+      <input type="url" name="audio" class="form-control" id="audio" placeholder="Audio URL">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
