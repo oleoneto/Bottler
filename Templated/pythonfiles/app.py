@@ -1,9 +1,14 @@
 # Bottle-Autogenerator
 
 from settings import *
+import bottle
 from bottle import default_app, route, post, get, template, run, static_file, request, response
 from sqlalchemy import create_engine, Column, Integer, Sequence, String
 from sqlalchemy.ext.declarative import declarative_base
+from dbconfig import createTables, createSong, searchSong
+
+bottle.TEMPLATE_PATH = ['./views/', './views/templates/']
+
 
 # ----- STATIC FILES ----------
 @route('/static/<filepath:path>')
@@ -30,8 +35,19 @@ def about():
 
 @route('/music')
 def music():
-    return template('music.html')
+    query=searchSong()
+    return template('music.html', songs=query)
 
+# --- DATABASE -------
+@route('/db')
+def dbsearch():
+    return template('dbsearch.html')
+
+@post('/db')
+def dblist():
+    song = request.forms.get("search")
+    query = searchSong(song)
+    return template('dblist.html', songs=query)
 
 # --- LOGIN --------
 # This is equivalent to:
@@ -53,13 +69,17 @@ def do_login():
 
 # Simple login implementation.
 def check_login(username, password):
-    if username == "user" and password == "password":
+    if username == "user@online.com" and password == "password":
         return True
     else:
         return False
 
 
 
+# ---------------------------------------------------
+# ---------------------------------------------------
+# ---------------------------------------------------
+# ---------------------------------------------------
 
 # ---------------------------------------------------
 # ---------------------------------------------------
