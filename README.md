@@ -32,4 +32,4 @@ Specify the name of the project (or app).
 ### Pull requests
 Feel free to submit your contributions.
 
-**Django Autogenerator** is [MIT Licensed](LICENSE).
+**Bottle Autogenerator** is [MIT Licensed](LICENSE).
