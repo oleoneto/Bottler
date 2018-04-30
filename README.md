@@ -32,4 +32,4 @@ Specify the name of the project (or app).
 ### Pull requests
 Feel free to submit your contributions.
 
-**Bottle Autogenerator** is [MIT Licensed](LICENSE).
+**Autogenerator for Bottle** is [MIT Licensed](LICENSE).
