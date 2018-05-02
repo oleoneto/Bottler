@@ -13,12 +13,12 @@ This script can be modified to perform more advanced tasks.
 ### Installation
 Start by cloning the repo.
 ```
-git clone https://github.com/oleoneto/Bottle-Autogenerator.git
+git clone https://github.com/oleoneto/Autogenerator-Bottle.git
 ```
 
 Give the script `generator.sh` permission to run.
 ```
-cd Bottle-Autogenerator
+cd Autogenerator-Bottle
 chmod 755 generator.sh
 ```
 
