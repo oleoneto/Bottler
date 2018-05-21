@@ -47,8 +47,6 @@ function PlayTrack(id) {
     currentTitle = currentTitle.textContent;
     songTitle = "Playing: " + currentTitle;
 
-    // console.log(currentTitle);
-
     if (currentSong.paused === true) {
         currentSong.play();
         UpdatePlayIcon(currentIcon);
@@ -86,7 +84,6 @@ function ProcessEndedTrack(el) {
 
 function UpdatePageTitle(title) {
   pageTitle[0].textContent = title;
-  // console.log(pageTitle[0].textContent);
 }
 
 function UpdatePlayIcon(playIcon) {
