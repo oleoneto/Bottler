@@ -1,4 +1,4 @@
-# Autogenerator for Bottle
+# Bottler
 
 Generates a Bottle App with some sample HTML, CSS, and JavaScript placed inside the project directory.
 This script can be modified to perform more advanced tasks.
